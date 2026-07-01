@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 struct Balise {
 	float frequence;
 	int statut_signal;

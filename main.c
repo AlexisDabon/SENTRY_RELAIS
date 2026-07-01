@@ -21,10 +21,10 @@ int main () {
 		break;
 	}
 
-	else { 
+	else {
 		echecs++;
 		printf("erreur \n");
-	} 
+	}
 }
 	if (echecs == 3) {
 		return 10;

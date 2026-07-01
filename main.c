@@ -43,6 +43,19 @@ int main () {
 	printf("choix : \n");
 	scanf("%d", &choix);
 
+	switch (choix) {
+		case 1 :
+			printf("entrez la nouvelle frequence : \n");
+			scanf("%f", &ma_balise.frequence);
+			printf("nouvelle frequence : %.2f \n", ma_balise.frequence);
+			break;
+		case 2 :
+			printf("Deconnexion \n");
+			return 0;
+		default : 
+			printf("choix invalide \n");
+			break;
+	}
 
 return 0;
 

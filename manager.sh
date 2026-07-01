@@ -8,8 +8,10 @@ if [ -f "main.c" ]; then
 		echo "Echec compilation"
 		exit 1
 	fi
+	
+	clear
 
-	echo "Compilation réussit"
+	./programme_balise
 
 else
 	echo "fichier introuvable"

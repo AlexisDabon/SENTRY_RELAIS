@@ -20,11 +20,20 @@ int main () {
 		printf("code correct \n");
 		break;
 	}
+
 	else { 
 		echecs++;
 		printf("erreur \n");
 	} 
 }
+	if (echecs == 3) {
+		return 10;
+	}
 
-	
+	printf("Access \n");
+
+return 0;
+
+}
+		
 

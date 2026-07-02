@@ -50,10 +50,10 @@ int main () {
 	printf("entrez la nouvelle frequence : \n");
 	scanf("%f", &ma_balise.frequence);
 
-	if (ma_balise.frequence < 100 || ma_balise.frequence > 500) {
-	        printf("interuption du programme \n");
-		ma_balise.statut_signal = 0;
-		return 20;
+	if (ma_balise.frequence < 100.0 || ma_balise.frequence > 500.0) {
+	printf("interuption du programme \n");
+	ma_balise.statut_signal = 0;
+	return 20;
 	}
 
 	printf("nouvelle frequence : %.2f \n", ma_balise.frequence);

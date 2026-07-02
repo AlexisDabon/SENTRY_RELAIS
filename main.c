@@ -8,7 +8,7 @@ struct Balise {
 int main () {
 	struct Balise ma_balise;
 		ma_balise.frequence = 150.0;
- 		ma_balise.statut_signal = 1;
+		ma_balise.statut_signal = 1;
 	
 	int code_secret = 1234;
 	int echecs = 0;

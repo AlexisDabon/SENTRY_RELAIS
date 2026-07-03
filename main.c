@@ -14,11 +14,16 @@ int main () {
 	int echecs = 0;
 	int saisis_utilisateur = 0;
 	int choix = 0;
+	int c;
 
 	while (echecs < 3) {
 		printf("taper le code d'accès \n");
-		scanf("%d", &saisis_utilisateur);
-
+		if (scanf("%d", &saisis_utilisateur) != 1) {
+		printf("saisis invalide : tapez des chiffres \n");
+		while ((c = getchar()) != '\n' && c != EOF);
+		echecs++;
+		continue;
+	}
 	if (saisis_utilisateur == code_secret) {
 		printf("code correct \n");
 		break;

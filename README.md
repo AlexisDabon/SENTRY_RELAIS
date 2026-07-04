@@ -31,7 +31,7 @@ It compiles the C code cleanly (`-Wall -Wextra`) and monitors its execution. It 
 ---
 
 <details>
-<summary>📜 <b>Project Specifications (Cahier des Charges Synthétisé)</b></summary>
+<summary>📜 <b>Project Specifications</b></summary>
 
 ### [1] C Core Architecture
 - Implementation of a custom `Balise` struct (`frequence` as float, `statut_signal` as int).

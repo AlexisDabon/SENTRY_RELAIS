@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 
 struct Balise {
 	float frequence;
@@ -70,6 +71,14 @@ int main () {
 		j++;
 	}
 	mon_payload.data_brut[j] = '\0';
+
+	mon_payload.clefs_dynamiques = (unsigned char)((time(NULL) %255) +1);
+	appliquer_crypto(&mon_payload);
+
+	printf("\n--- RELAIS CRYPTO ---\n");
+	printf("clef active: Hexa: 0x%02X \n", mon_payload.clefs_dynamiques);
+	printf("Payload chiffré: %s \n", mon_payload.data_chiffres);
+	printf("-----------------------\n\n");
 
 	printf("frequence : %.2f \n", ma_balise.frequence);
 	printf("statut_signal : %d \n", ma_balise.statut_signal);

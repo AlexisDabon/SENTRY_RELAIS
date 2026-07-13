@@ -3,7 +3,14 @@
 struct Balise {
 	float frequence;
 	int statut_signal;
-};
+	};
+	
+	typedef struct {
+		char data_brut [64];
+		char data_chiffre [64];
+		unsigned char clef_dynamique;
+	} Payload;
+
 
 int main () {
 	struct Balise ma_balise;

@@ -7,10 +7,21 @@ struct Balise {
 	
 	typedef struct {
 		char data_brut [64];
-		char data_chiffre [64];
-		unsigned char clef_dynamique;
+		char data_chiffres [64];
+		unsigned char clefs_dynamiques;
 	} Payload;
+	
+	void appliquer_crypto(Payload *p) {
+		int i = 0;
 
+		while (p -> data_brut[i] != '\0' && i < 64) {
+			p -> data_chiffres[i] = p -> data_brut[i] ^ p -> clefs_dynamiques;
+			i ++;
+		}
+		if (i < 64) {
+			p -> data_chiffres[i] = '\0';
+		}
+	}
 
 int main () {
 	struct Balise ma_balise;

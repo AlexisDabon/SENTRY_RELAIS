@@ -24,10 +24,13 @@ struct Balise {
 	}
 
 int main () {
+
 	struct Balise ma_balise;
 		ma_balise.frequence = 150.0;
 		ma_balise.statut_signal = 1;
-	
+
+	Payload mon_payload;
+
 	int code_secret = 1234;
 	int echecs = 0;
 	int saisis_utilisateur = 0;
@@ -59,6 +62,15 @@ int main () {
 
 	printf("Access \n");
 	
+	int j = 0;
+	char *message = "SENTRY_ACTIVE";
+
+	while (message[j] != '\0' && j < 63) {
+		mon_payload.data_brut[j] = message[j];
+		j++;
+	}
+	mon_payload.data_brut[j] = '\0';
+
 	printf("frequence : %.2f \n", ma_balise.frequence);
 	printf("statut_signal : %d \n", ma_balise.statut_signal);
 

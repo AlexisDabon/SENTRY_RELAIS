@@ -42,18 +42,18 @@ int main () {
 		echecs++;
 		continue;
 	}
-	if (saisis_utilisateur == code_secret) {
+		if (saisis_utilisateur == code_secret) {
 		printf("code correct \n");
 		break;
-	}
+		}
 
-	else {
+		else {
 		echecs++;
 		printf("erreur \n");
-	}
+		}
 	}
 
-	if (echecs == 3) {
+		if (echecs == 3) {
 		return 10;
 	}
 
@@ -69,26 +69,26 @@ int main () {
 
 	switch (choix) {
 
-	case 1 :
-	printf("entrez la nouvelle frequence : \n");
-	scanf("%f", &ma_balise.frequence);
+		case 1 :
+		printf("entrez la nouvelle frequence : \n");
+		scanf("%f", &ma_balise.frequence);
 
-	if (ma_balise.frequence < 100.0 || ma_balise.frequence > 500.0) {
-	printf("interuption du programme \n");
-	ma_balise.statut_signal = 0;
-	return 20;
-	}
+		if (ma_balise.frequence < 100.0 || ma_balise.frequence > 500.0) {
+		printf("interuption du programme \n");
+		ma_balise.statut_signal = 0;
+		return 20;
+		}
 
-	printf("nouvelle frequence : %.2f \n", ma_balise.frequence);
-	break;
+		printf("nouvelle frequence : %.2f \n", ma_balise.frequence);
+		break;
 
-	case 2 :
-	printf("Deconnexion \n");
-	return 0;
+		case 2 :
+		printf("Deconnexion \n");
+		return 0;
 
-	default :
-	printf("choix invalide \n");
-	break;
+		default :
+		printf("choix invalide \n");
+		break;
 
 	}
 

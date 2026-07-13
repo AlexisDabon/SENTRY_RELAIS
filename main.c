@@ -77,8 +77,11 @@ int main () {
 
 	printf("\n--- RELAIS CRYPTO ---\n");
 	printf("clef active: Hexa: 0x%02X \n", mon_payload.clefs_dynamiques);
-	printf("Payload chiffré: %s \n", mon_payload.data_chiffres);
-	printf("-----------------------\n\n");
+	printf("Payload chiffré: ");
+	for (int k = 0; k < j; k++) {
+		printf("%02X ", (unsigned char)mon_payload.data_chiffres[k]);
+	}
+	printf("\n-----------------------\n\n");
 
 	printf("frequence : %.2f \n", ma_balise.frequence);
 	printf("statut_signal : %d \n", ma_balise.statut_signal);
